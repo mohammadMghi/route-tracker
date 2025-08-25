@@ -1,0 +1,25 @@
+{
+    "name": "mohammad/route-tracker",
+    "description": "A Laravel package to track every route call",
+    "autoload": {
+        "psr-4": {
+            "Mohammad\\RouteTracker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourName\\RouteTracker\\RouteTrackerServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "mohammad"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0"
+    }
+}
