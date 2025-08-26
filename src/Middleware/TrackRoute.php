@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\RouteTracker\Middleware;
+namespace MohammadMghi\RouteTracker\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\DB;

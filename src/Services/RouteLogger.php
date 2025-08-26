@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\RouteTracker\Services;
+namespace MohammadMghi\RouteTracker\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;

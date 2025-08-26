@@ -19,8 +19,7 @@ class RouteTrackerServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-
-        // Register middleware alias
+ 
         $this->app['router']->aliasMiddleware('track.route', TrackRoute::class);
     }
 }
