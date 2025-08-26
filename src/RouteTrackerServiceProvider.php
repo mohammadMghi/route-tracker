@@ -1,9 +1,9 @@
 <?php
 
-namespace YourName\RouteTracker;
+namespace MohammadMghi\RouteTracker;;
 
 use Illuminate\Support\ServiceProvider;
-use YourName\RouteTracker\Middleware\TrackRoute;
+use MohammadMghi\RouteTracker\Middleware\TrackRoute;
 
 class RouteTrackerServiceProvider extends ServiceProvider
 {
