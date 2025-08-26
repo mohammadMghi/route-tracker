@@ -13,6 +13,10 @@ return new class extends Migration {
             $table->string('method');
             $table->string('route');
             $table->string('ip_address')->nullable();
+            $table->string('previous_route')->nullable();
+            $table->integer('duration')->nullable(); // time spent on previous page in seconds
+            $table->string('session_id')->nullable()->index(); 
+            $table->text('parameters')->nullable();
             $table->timestamps();
         });
     }
