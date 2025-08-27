@@ -6,15 +6,15 @@ You can track your users navigation between APIs and web pages , duration time u
 #### Installation
 
 ```
-    composer require mohammadmghi/route-tracker
+composer require mohammadmghi/route-tracker
 ```
  
 #### 
 ```
-    php artisan migration
+php artisan migration
 ```
 ```
-    php artisan vendor:publish --tag=config
+php artisan vendor:publish --tag=config
 ```
 ###
 ### Now you have a table inside you'r database called ```route_logs``` it has columns as following
