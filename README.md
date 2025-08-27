@@ -5,7 +5,7 @@ You can track your users navigation between APIs and web pages , duration time u
 
 #### Installation
 
-```http
+```
     composer require mohammadmghi/route-tracker
 ```
  
