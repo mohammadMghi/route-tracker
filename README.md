@@ -2,6 +2,8 @@
 
 You can track your users navigation between APIs and web pages , duration time user intracting and use your pages and APIs.
 
+<img width="1653" height="570" alt="image" src="https://github.com/user-attachments/assets/3925bed0-de54-41dd-99c7-e6141e15eb43" />
+
 
 #### Installation
 
