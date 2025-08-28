@@ -34,3 +34,6 @@ php artisan vendor:publish --tag=config
 ```duration``` This is duration that user interacted with your api
 
 ```session_id``` This is your user session id visited the route
+
+### Dashbord
+For open dashbord going to : ```https://yoursite/route-tracker/dashboard```
