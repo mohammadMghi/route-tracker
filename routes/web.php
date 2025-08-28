@@ -8,4 +8,4 @@ Route::middleware(['web', 'auth'])
     ->group(function () {
         Route::get('/dashboard', [RouteTrackerDashboardController::class, 'index'])
             ->name('route-tracker.dashboard');
-    });
+});
