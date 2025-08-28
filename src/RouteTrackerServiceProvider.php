@@ -3,7 +3,7 @@
 namespace MohammadMghi\RouteTracker;;
 
 use Illuminate\Support\ServiceProvider;
-use MohammadMghi\RouteTracker\Middleware\TrackRoute;
+use MohammadMghi\RouteTracker\Http\Middleware\TrackRoute;
 
 class RouteTrackerServiceProvider extends ServiceProvider
 {
@@ -18,7 +18,11 @@ class RouteTrackerServiceProvider extends ServiceProvider
             __DIR__.'/../config/route-tracker.php' => config_path('route-tracker.php'),
         ], 'config');
 
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'route-tracker');
+
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
  
         $this->app['router']->aliasMiddleware('track.route', TrackRoute::class);
     }
