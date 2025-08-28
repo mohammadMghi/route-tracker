@@ -9,15 +9,18 @@ use App\Http\Controllers\Controller;
 class RouteTrackerDashboardController extends Controller
 {
     public function index(Request $request)
-    {
-        $from = $request->get('from', Carbon::now()->subDays(7));
-        $to = $request->get('to', Carbon::now());
+    {  
+        $query = RouteLog::query();
+        
+        if ($search = $request->input('search')) {
+            $query->where('user_id', 'like', "%{$search}%")
+                ->orWhere('route', 'like', "%{$search}%")
+                ->orWhere('ip_address', 'like', "%{$search}%")
+                ->orWhere('previous_route', 'like', "%{$search}%");
+        }
 
-        $logs = RouteLog::whereBetween('visited_at', [$from, $to])
-            ->orderBy('visited_at', 'asc')
-            ->get()
-            ->groupBy('user_id');
+        $logs = $query->orderBy('visited_at', 'desc')->get();
 
-        return view('route-tracker::dashboard', compact('logs', 'from', 'to'));
+        return view('route-tracker::dashboard', compact('logs'));
     }
 }
