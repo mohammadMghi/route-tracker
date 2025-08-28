@@ -1,0 +1,21 @@
+{
+    "name": "mohammadmghi/route-tracker",
+    "description": "A Laravel package to track routes",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "MohammadMghi\\RouteTracker\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MohammadMghi\\RouteTracker\\RouteTrackerServiceProvider"
+            ]
+        }
+    }
+}
